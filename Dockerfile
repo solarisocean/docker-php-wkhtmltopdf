@@ -26,3 +26,5 @@ DISPLAY=:0.0 wkhtmltopdf-origin $@ \n\
 killall Xvfb\
 ' > /usr/bin/wkhtmltopdf && \
 chmod +x /usr/bin/wkhtmltopdf
+
+USER wodby
