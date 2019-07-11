@@ -1,3 +1,4 @@
+# https://github.com/wodby/php/issues/40
 FROM wodby/drupal-php:7.1
 
 USER root
@@ -26,5 +27,7 @@ DISPLAY=:0.0 wkhtmltopdf-origin $@ \n\
 killall Xvfb\
 ' > /usr/bin/wkhtmltopdf && \
 chmod +x /usr/bin/wkhtmltopdf
+
+RUN ln -s /usr/bin/wkhtmltopdf /usr/local/bin/wkhtmltopdf
 
 USER wodby
